@@ -19,7 +19,7 @@ public class Q11 {
 		}
 		
 		
-		// ±ÙÀÇ °ø½Ä
+		// ê·¼ì˜ ê³µì‹
 		double x1, x2, a = 5.0, b = 13.0, c = 6.0;
 		x1 = (-b - Math.sqrt(b * b - 4 * a * c)) / (2 * a);
 		x2 = (-b + Math.sqrt(b * b - 4 * a * c)) / (2 * a);

@@ -11,24 +11,24 @@ public class BasicEx01 {
 		int min = 999999;
 		int mid;
 		
-		System.out.println("»õ Á¤¼öÀÇ ÃÖ´ë°ªÀ» ±¸ÇÕ´Ï´Ù.");
+		System.out.println("ìƒˆ ì •ìˆ˜ì˜ ìµœëŒ€ê°’ì„ êµ¬í•©ë‹ˆë‹¤.");
 		sc = new Scanner(System.in);
-		System.out.print("aÀÇ °ª ");
+		System.out.print("aì˜ ê°’ ");
 		a = sc.nextInt();
-		System.out.print("bÀÇ °ª ");
+		System.out.print("bì˜ ê°’ ");
 		b = sc.nextInt();		
-		System.out.print("cÀÇ °ª ");
+		System.out.print("cì˜ ê°’ ");
 		c = sc.nextInt();
 		
 		if (max < a) max = a;
 		if (max < b) max = b;
 		if (max < c) max = c;
-		System.out.println("ÃÖ´ë°ªÀº " + max + "ÀÔ´Ï´Ù.");
+		System.out.println("ìµœëŒ€ê°’ì€ " + max + "ì…ë‹ˆë‹¤.");
 		
 		if (min > a) min = a;
 		if (min > b) min = b;
 		if (min > c) min = c;
-		System.out.println("ÃÖ¼Ò°ªÀº " + min + "ÀÔ´Ï´Ù.");
+		System.out.println("ìµœì†Œê°’ì€ " + min + "ì…ë‹ˆë‹¤.");
 		
 		if (a >= b)
 			if (b >= c)
@@ -43,7 +43,7 @@ public class BasicEx01 {
 			mid = c;
 		else
 			mid = b;
-		System.out.println("Áß¾Ó°ªÀº " + mid + "ÀÔ´Ï´Ù.");
+		System.out.println("ì¤‘ì•™ê°’ì€ " + mid + "ì…ë‹ˆë‹¤.");
 	}
 
 }

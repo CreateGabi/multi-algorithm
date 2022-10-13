@@ -9,7 +9,7 @@ public class Q10 {
 		int count = 0;
 		Scanner sc = new Scanner(System.in);
 		
-		System.out.print("¾çÀÇ Á¤¼ö¸¦ ÀÔ·ÂÇÏ¼¼¿ä. ");
+		System.out.print("ì–‘ì˜ ì •ìˆ˜ë¥¼ ì…ë ¥í•˜ì„¸ìš”. ");
 		n = sc.nextInt();
 		ori_number = n;
 		
@@ -17,7 +17,7 @@ public class Q10 {
 			n = n / 10;
 			count++;
 		}
-		System.out.println(ori_number + "´Â " + count + "ÀÚ¸® ÀÔ´Ï´Ù.");
+		System.out.println(ori_number + "ëŠ” " + count + "ìë¦¬ ì…ë‹ˆë‹¤.");
 	}
 
 }

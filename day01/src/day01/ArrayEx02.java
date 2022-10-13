@@ -9,25 +9,25 @@ public class ArrayEx02 {
 	public static void main(String[] args) {
 		String[][] s = new String[10][2];
 		s[0][0] = "0397134";
-		s[0][1] = "±èÈ¿Áø";
+		s[0][1] = "ê¹€íš¨ì§„";
 		s[1][0] = "0465345";
-		s[1][1] = "ÀÌÁ¾Çù";
+		s[1][1] = "ì´ì¢…í˜‘";
 		s[2][0] = "0427214";
-		s[2][1] = "¼­»óÃá";
+		s[2][1] = "ì„œìƒì¶˜";
 		s[3][0] = "0487342";
-		s[3][1] = "¹è¿µ¹Ì";
+		s[3][1] = "ë°°ì˜ë¯¸";
 		s[4][0] = "0512478";
-		s[4][1] = "±è¿¹Áø";
+		s[4][1] = "ê¹€ì˜ˆì§„";
 		
-		// ºñ¾îÀÖ´Â ÀÎµ¦½º 5¸¦ ±¸ÇØ¼­ ³Ö±â
+		// ë¹„ì–´ìˆëŠ” ì¸ë±ìŠ¤ 5ë¥¼ êµ¬í•´ì„œ ë„£ê¸°
 		int i = 0;
 		for (; i < s.length; i++) {
 			if (s[i][0] == null) break;
 		}
 		Scanner sc = new Scanner(System.in);
-		System.out.print("ÇĞ¹øÀº ");
+		System.out.print("í•™ë²ˆì€ ");
 		s[i][0] = sc.next();
-		System.out.print("ÀÌ¸§Àº ");
+		System.out.print("ì´ë¦„ì€ ");
 		s[i][1] = sc.next();
 		
 		for (String[] strings : s) {
@@ -37,9 +37,9 @@ public class ArrayEx02 {
 			System.out.println();
 		}
 		
-		// ¹è¿µ¹Ì »èÁ¦
-		// ¹è¿µ¹Ì Ã£¾Æ¼­ null·Î ¹Ù²Ù¾îÁÖ±â
-		String deleteName = "¹è¿µ¹Ì";
+		// ë°°ì˜ë¯¸ ì‚­ì œ
+		// ë°°ì˜ë¯¸ ì°¾ì•„ì„œ nullë¡œ ë°”ê¾¸ì–´ì£¼ê¸°
+		String deleteName = "ë°°ì˜ë¯¸";
 		int j = 0;
 		for (; j < s.length; j++) {
 			if (s[j][1].equals(deleteName)) break;
@@ -47,7 +47,7 @@ public class ArrayEx02 {
 		System.out.println(s[j][1] + " " + j);
 		s[j][0] = null;
 		s[j][1] = null;
-		System.out.println("--------»èÁ¦ ÈÄ Ãâ·Â---------");
+		System.out.println("--------ì‚­ì œ í›„ ì¶œë ¥---------");
 		for (String[] strings : s) {
 			for (String strings2 : strings) {
 				System.out.print(strings2 + " ");
@@ -55,9 +55,9 @@ public class ArrayEx02 {
 			System.out.println();
 		}
 		
-		// ±è¿¹ÁøÀÌ ¿ì¸®¹İÀÎÁö °Ë»ö
-		// ¿ì¸®¹İÀÌ¸é ÇĞ¹ø°ú ÀÌ¸§ Ãâ·Â, ¾Æ´Ï¸é ¾Æ´Õ´Ï´Ù¶ó°í Ãâ·Â
-		String searchName = "¹Ú¿¹Áø";
+		// ê¹€ì˜ˆì§„ì´ ìš°ë¦¬ë°˜ì¸ì§€ ê²€ìƒ‰
+		// ìš°ë¦¬ë°˜ì´ë©´ í•™ë²ˆê³¼ ì´ë¦„ ì¶œë ¥, ì•„ë‹ˆë©´ ì•„ë‹™ë‹ˆë‹¤ë¼ê³  ì¶œë ¥
+		String searchName = "ë°•ì˜ˆì§„";
 		int k = 0;
 		boolean searchFlag = false;
 		for (; k < s.length; k++) {
@@ -66,11 +66,11 @@ public class ArrayEx02 {
 				break;
 			}
 		}
-		System.out.println("--------°Ë»ö ÈÄ Ãâ·Â---------");
+		System.out.println("--------ê²€ìƒ‰ í›„ ì¶œë ¥---------");
 		if (searchFlag) {
 			System.out.println(s[k][0] + " " + s[k][1]);
 		} else {
-			System.out.println("¿ì¸®¹İÀÌ ¾Æ´Õ´Ï´Ù.");
+			System.out.println("ìš°ë¦¬ë°˜ì´ ì•„ë‹™ë‹ˆë‹¤.");
 		}
 		
 		

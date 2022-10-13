@@ -16,7 +16,7 @@ public class ArrayEx01 {
 
 		double[][][] c = new double[2][3][2];
 
-		// ¹®1)
+		// ë¬¸1)
 		int[] arr1 = new int[10];
 		for (int i = 0; i < arr1.length; i++) {
 			arr1[i] = (i + 1) * 100;
@@ -25,14 +25,14 @@ public class ArrayEx01 {
 //			System.out.print(arr1[i] + " ");
 //		}
 //		System.out.println();
-		// Çâ»óµÈ for¹®  foreach
+		// í–¥ìƒëœ forë¬¸  foreach
 		for (int i : arr1) {
 			System.out.print(i + " ");
 		}
 		System.out.println();
 		System.out.println();
 
-		// ¹®2)
+		// ë¬¸2)
 		int[][] arr2 = new int[2][3];
 		int number = 100;
 		for (int i = 0; i < arr2.length; i++) {
@@ -61,13 +61,13 @@ public class ArrayEx01 {
 		}
 		System.out.println();
 
-		// ¹®3)
+		// ë¬¸3)
 		String[][][] str = { { { "a", "b" }, { "c", "d" }, { "e", "f" } }, 
 				             { { "g", "h" }, { "i", "j" }, { "k", "l" } } };
 		
-		System.out.println("¸éÀÇ °¹¼ö" + str.length);
-		System.out.println("ÇàÀÇ °¹¼ö" + str[0].length);
-		System.out.println("¿­ÀÇ °¹¼ö" + str[0][0].length);
+		System.out.println("ë©´ì˜ ê°¯ìˆ˜" + str.length);
+		System.out.println("í–‰ì˜ ê°¯ìˆ˜" + str[0].length);
+		System.out.println("ì—´ì˜ ê°¯ìˆ˜" + str[0][0].length);
 		
 //		for (int i = 0; i < str.length; i++) {
 //			for (int j = 0; j < str[i].length; j++) {
