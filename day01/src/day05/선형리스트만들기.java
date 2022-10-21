@@ -16,6 +16,12 @@ public class 선형리스트만들기 {
 		arr.insert(arr, 1, 2);
 		arr.insert(arr, 2, 3);
 		arr.insert(arr, 1, 4);
+		arr.insert(arr, 4, 5);
+		arr.insert(arr, 5, 6);
+		arr.insert(arr, 6, 7);
+		arr.insert(arr, 7, 8);
+		arr.insert(arr, 8, 9);
+		arr.insert(arr, 9, 10);
 		
 		arr.printall(arr);
 		System.out.println();
@@ -45,12 +51,21 @@ class List {
 	}
 	public void delete(List a, int x) {
 		// 해당 값을 찾아서 삭제
-		for (int i=0; i<size; i++) {
-			if (a.arr[i] == x) {
-				while (i < size-1) a.arr[i] = a.arr[i+1];
-				size--;
-			}
+//		for (int i=0; i<size; i++) {
+//			if (i == x) {
+//				int j = i;
+//				while (j < size - 1) {
+//					a.arr[j] = a.arr[j+1];
+//					j++;
+//				}
+//				size--;
+//			}
+//		}
+		for (int i=x; i<size; i++) {
+			if (i+1 >= size) a.arr[i] = 0;
+			else a.arr[i] = a.arr[i+1];
 		}
+		size--;
 	}
 	public void printall(List a) {
 		// 전체 출력
