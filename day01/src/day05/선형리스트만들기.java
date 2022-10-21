@@ -11,23 +11,23 @@ public class 선형리스트만들기 {
 	public static void main(String[] args) {
 		List arr = new List();
 		arr.createList(10);
-		System.out.println(arr.isEmpty(arr));
-		arr.insert(arr, 0, 1);
-		arr.insert(arr, 1, 2);
-		arr.insert(arr, 2, 3);
-		arr.insert(arr, 1, 4);
-		arr.insert(arr, 4, 5);
-		arr.insert(arr, 5, 6);
-		arr.insert(arr, 6, 7);
-		arr.insert(arr, 7, 8);
-		arr.insert(arr, 8, 9);
-		arr.insert(arr, 9, 10);
+		System.out.println(arr.isEmpty());
+		arr.insert(0, 1);
+		arr.insert(1, 2);
+		arr.insert(2, 3);
+		arr.insert(1, 4);
+		arr.insert(4, 5);
+		arr.insert(5, 6);
+		arr.insert(6, 7);
+		arr.insert(7, 8);
+		arr.insert(8, 9);
+		arr.insert(9, 10);
 		
-		arr.printall(arr);
+		arr.printall();
 		System.out.println();
 		
-		arr.delete(arr, 0);
-		arr.printall(arr);
+		arr.delete(0);
+		arr.printall();
 		
 //		List ulist = new ArrayList<Integer>();
 //		ulist.add(10);
@@ -49,43 +49,44 @@ class List {
 		arr = new int[number];
 		size = 0;
 	}
-	public void delete(List a, int x) {
+	public void delete(int x) {
 		// 해당 값을 찾아서 삭제
 //		for (int i=0; i<size; i++) {
 //			if (i == x) {
 //				int j = i;
 //				while (j < size - 1) {
-//					a.arr[j] = a.arr[j+1];
+//					arr[j] = arr[j+1];
 //					j++;
 //				}
 //				size--;
 //			}
-//		}
+//		}  // 강사가 사용한 방법
+		// 내가 수정함
 		for (int i=x; i<size; i++) {
-			if (i+1 >= size) a.arr[i] = 0;
-			else a.arr[i] = a.arr[i+1];
+			if (i+1 >= size) arr[i] = 0;
+			else arr[i] = arr[i+1];
 		}
 		size--;
 	}
-	public void printall(List a) {
+	public void printall() {
 		// 전체 출력
 		for (int i=0; i<size; i++) {
-			System.out.printf("%3d", a.arr[i]);
+			System.out.printf("%3d", arr[i]);
 		}
 	}
-	public void insert(List a, int i, int x) {
+	public void insert(int i, int x) {
 		// 리스트에 값 삽입
 		int len = size;
 		while (i != len) {
-			a.arr[len] = a.arr[len - 1];
+			arr[len] = arr[len - 1];
 			len--;
 		}
-		a.arr[i] = x;
+		arr[i] = x;
 		size++;
 	}
-	public boolean isEmpty(List a) {
+	public boolean isEmpty() {
 		// 배열이 비어있는지 확인
-		return a.size == 0;
+		return size == 0;
 	}
 }
 // 리스트는 데이터를 순서대로 나열한 구조
